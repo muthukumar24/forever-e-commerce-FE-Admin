@@ -36,7 +36,7 @@ const ProductEditModal = ({ product, isOpen, onClose, fetchList, token }) => {
       if (image3) formData.append('image3', image3);
       if (image4) formData.append('image4', image4);
 
-      const response = await axios.put(`http://localhost:4000/api/product/update/${product._id}`, formData, { headers: { token } });
+      const response = await axios.put(`https://forever-e-commerce-backend.onrender.com/api/product/update/${product._id}`, formData, { headers: { token } });
 
       if (response.data.success) {
         toast.success('Product updated successfully');
